@@ -139,5 +139,5 @@ smart-hvac-project/
 
 
 
-## 🏗️ System Architecture
+
 
