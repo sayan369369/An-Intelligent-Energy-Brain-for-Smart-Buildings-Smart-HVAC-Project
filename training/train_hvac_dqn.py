@@ -1,10 +1,12 @@
 import os
+import sys
 from stable_baselines3 import DQN
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.callbacks import BaseCallback
 from tqdm import tqdm
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
-from smart_hvac_env import SmartHVACEnv  # <--- CRITICAL: Imports your updated physics
+from env.smart_hvac_env import SmartHVACEnv  # <--- CRITICAL: Imports your updated physics
 
 # -----------------------------
 # Config

@@ -13,7 +13,7 @@ PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.insert(0, PROJECT_ROOT)
 
 try:
-    from smart_hvac_env import SmartHVACEnv
+    from env.smart_hvac_env import SmartHVACEnv
 except ImportError:
     st.error("⚠️ Could not import 'SmartHVACEnv'. Please ensure smart_hvac_env.py is in the directory.")
     st.stop()

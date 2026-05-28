@@ -1,11 +1,15 @@
 # train.py
 import os
+import sys
 from stable_baselines3 import DQN
 from stable_baselines3.common.monitor import Monitor
 
 # Import the UPDATED environment class
 # Make sure smart_hvac_env.py contains the NEW code I gave you previously
-from smart_hvac_env import SmartHVACEnv 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from env.smart_hvac_env import SmartHVACEnv 
+env = SmartHVACEnv()
 
 # Config
 TOTAL_TIMESTEPS = 100_000 # Train enough to learn the new logic
